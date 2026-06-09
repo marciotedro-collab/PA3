@@ -323,8 +323,12 @@ def grafico_palabras_clave(df: pd.DataFrame):
         labels={"Frecuencia": "Frecuencia en corpus", "Término": ""},
     )
     fig.update_layout(
-        **PLOTLY_LAYOUT,
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        font=dict(family="Inter, sans-serif", color="#cbd5e1"),
+        margin=dict(t=40, b=40, l=60, r=20),
         legend=dict(bgcolor="rgba(0,0,0,0)", title=""),
+        xaxis=dict(gridcolor="#1e3a5f", linecolor="#334155"),
         yaxis=dict(autorange="reversed", gridcolor="#1e3a5f", linecolor="#334155"),
     )
     st.plotly_chart(fig, use_container_width=True)
